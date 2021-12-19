@@ -1,5 +1,5 @@
-# Really shit basic thing for removing, storing, getting credits for a player
-## Legit dont do anything else. 
-### only credit storing...
+# PIXELCredits (System)
 
-#### named pixel credits because pixel i guess
+## Really shit credit **SYSTEM** 
+### LEGIT ONLY STORES/GIVES/REMOVES CREDITS!!!!!
+### USE [THIS](https://github.com/Lythium4848/Credit-Store) FOR A STORE
