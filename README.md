@@ -1,1 +1,3 @@
-Credit-System
+# Really shit basic thing for removing, storing, getting credits for a player
+## Legit dont do anything else. 
+### only credit storing...

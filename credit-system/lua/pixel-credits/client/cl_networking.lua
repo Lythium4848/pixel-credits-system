@@ -1,0 +1,13 @@
+hook.Add("InitPostEntity", "PIXEL.Credits.SetupUser", function()
+	local ply = LocalPlayer()
+	net.Start("pixel_credits_setup_user")
+	net.WriteEntity(ply)
+	net.SendToServer()
+end)
+
+net.Receive("pixel_credits_finished_setup_user", function()
+	local ply = LocalPlayer()
+	PIXEL.Credits.PlayersCredits = ply:GetNWInt("PIXEL.Credits.PlayersCredits")
+	PIXEL.Credits.DebugLog(PIXEL.Credits.PlayersCredits)
+	PIXEL.Credits.DebugLog(ply)
+end)
