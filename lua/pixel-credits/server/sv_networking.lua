@@ -10,7 +10,7 @@ net.Receive("pixel_credits_setup_user", function()
 	local plySteamID = ply:SteamID64()
 
 	PIXEL.Credits.DebugLog("Setting up user " .. plySteamID .. ".")
-	PIXEL.Credits.DB.Query("INSERT IGNORE INTO `pixel_credits_users` (`userid`) VALUES ('" .. plySteamID .. "')")
+	PIXEL.Credits.DB.Query("INSERT IGNORE INTO `credit_users` (`userid`) VALUES ('" .. plySteamID .. "')")
 
 	PIXEL.Credits.DB.GetCredits(plySteamID, function(data)
 		if not data[1] then

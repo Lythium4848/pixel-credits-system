@@ -34,14 +34,14 @@ function PIXEL.LoadDirectory(path)
 		else
 			if fileName:StartWith("cl_") then
 				AddCSLuaFile(filePath)
-				PIXEL.Credits.Log("info", "Loaded Client File: " .. filePath)
+				MsgC(Color(0, 0, 255), "[PIXELCredits] Loaded Client File: ", filePath, "\n")
 			elseif fileName:StartWith("sh_") then
 				AddCSLuaFile(filePath)
 				include(filePath)
-				PIXEL.Credits.Log("info", "Loaded Shared File: " .. filePath)
+				MsgC(Color(0, 0, 255), "[PIXELCredits] Loaded Shared File: ", filePath, "\n")
 			elseif fileName:StartWith("sv_") then
 				include(filePath)
-				PIXEL.Credits.Log("info", "Loaded Server File: " .. filePath)
+				MsgC(Color(0, 0, 255), "[PIXELCredits] Loaded Server File: ", filePath, "\n")
 			end
 		end
 	end

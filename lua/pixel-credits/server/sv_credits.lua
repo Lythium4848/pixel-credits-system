@@ -36,7 +36,10 @@ function PIXEL.Credits.DB.RemoveCredits(player, num)
 	PIXEL.Credits.DB.GetCredits(targetID, function(data)
 		if not data[1] then
 			PIXEL.Credits.Log("warning", "Failed to remove credits from " .. target:Nick() .. " (" .. targetID .. ")")
-
+			return
+		end
+		if data[1].credits == "0" then
+			PIXEL.Credits.Log("error", "Unable to remove credits from " .. target:Nick() .. " (" .. targetID .. ") as they have no credits")
 			return
 		end
 

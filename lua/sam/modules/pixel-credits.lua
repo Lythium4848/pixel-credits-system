@@ -46,7 +46,7 @@ sam.command.new("removecredits")
 
   :OnExecute(function(calling_ply, player, number)
     if SERVER then
-      PIXEL.Credits.DB.GiveCredits(player, number)
+      PIXEL.Credits.DB.RemoveCredits(player, number)
     end
     sam.player.send_message(nil, "{A} removed '{V}' credits from {T}", {
         A = calling_ply, T = player, V = number
