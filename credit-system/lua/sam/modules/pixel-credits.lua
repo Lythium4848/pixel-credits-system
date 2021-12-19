@@ -4,7 +4,7 @@ sam.command.set_category("ArsenicCredits")
 
 sam.command.new("givecredits")
   :SetPermission("givecredits", "superadmin")
-  :SetCategory("ArsenicCredits")
+  :SetCategory("PIXELCredits")
   :Help("Give credits to a player")
 
   :AddArg("player", {
@@ -30,7 +30,7 @@ sam.command.new("givecredits")
 
 sam.command.new("removecredits")
   :SetPermission("removecredits", "superadmin")
-  :SetCategory("ArsenicCredits")
+  :SetCategory("PIXELCredits")
   :Help("Give credits to a player")
 
   :AddArg("player", {
