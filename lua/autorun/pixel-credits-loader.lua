@@ -27,6 +27,7 @@ function PIXEL.Credits.DebugLog(...)
 end
 
 local function fuckingHugePrint()
+	print("\n")
 	epic(":::::::::  ::::::::::: :::    ::: :::::::::: :::         ::::::::  :::::::::  :::::::::: :::::::::  ::::::::::: :::::::::::  ::::::::  ")
 	epic(":+:    :+:     :+:     :+:    :+: :+:        :+:        :+:    :+: :+:    :+: :+:        :+:    :+:     :+:         :+:     :+:    :+: ")
 	epic("+:+    +:+     +:+      +:+  +:+  +:+        +:+        +:+        +:+    +:+ +:+        +:+    +:+     +:+         +:+     +:+        ")
@@ -34,6 +35,7 @@ local function fuckingHugePrint()
 	epic("+#+            +#+      +#+  +#+  +#+        +#+        +#+        +#+    +#+ +#+        +#+    +#+     +#+         +#+            +#+ ")
 	epic("#+#            #+#     #+#    #+# #+#        #+#        #+#    #+# #+#    #+# #+#        #+#    #+#     #+#         #+#     #+#    #+# ")
 	epic("###        ########### ###    ### ########## ##########  ########  ###    ### ########## #########  ###########     ###      ########  ")
+	epic("Loading PIXELCredits...")
 end
 
 function PIXEL.LoadDirectory(path)
@@ -47,14 +49,11 @@ function PIXEL.LoadDirectory(path)
 		else
 			if fileName:StartWith("cl_") then
 				AddCSLuaFile(filePath)
-				MsgC(Color(0, 0, 255), "[PIXELCredits] Loaded Client File: ", filePath, "\n")
 			elseif fileName:StartWith("sh_") then
 				AddCSLuaFile(filePath)
 				include(filePath)
-				MsgC(Color(0, 0, 255), "[PIXELCredits] Loaded Shared File: ", filePath, "\n")
 			elseif fileName:StartWith("sv_") then
 				include(filePath)
-				MsgC(Color(0, 0, 255), "[PIXELCredits] Loaded Server File: ", filePath, "\n")
 			end
 		end
 	end
