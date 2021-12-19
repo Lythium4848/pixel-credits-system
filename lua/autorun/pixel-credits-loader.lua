@@ -6,8 +6,6 @@ function PIXEL.Credits.Log(type, ...)
 	local col = ""
 	if type == "error" then
 		col = Color(255, 0, 0)
-	elseif type == "debug" then
-		col = Color(0, 255, 0)
 	elseif type == "info" then
 		col = Color(0, 0, 255)
 	elseif type == "warning" then
@@ -18,7 +16,7 @@ function PIXEL.Credits.Log(type, ...)
 	MsgC(col, "[PIXELCredits] ", ..., "\n")
 end
 
-function epic(...)
+local function epic(...)
 	local hex = string.upper(bit.tohex(math.random(0, 0xFFFFFFFF), 8))
 	MsgC(Color(0, 255, 0), "[0x", hex, "] ", ..., "\n")
 end
@@ -27,7 +25,8 @@ function PIXEL.Credits.DebugLog(...)
 	if !PIXEL.Credits.Debug then return end
 	MsgC(Color(0, 255, 0), "[PIXELCredits-DEBUG] ", ..., "\n")
 end
-function fuckingHugePrint()
+
+local function fuckingHugePrint()
 	epic(":::::::::  ::::::::::: :::    ::: :::::::::: :::         ::::::::  :::::::::  :::::::::: :::::::::  ::::::::::: :::::::::::  ::::::::  ")
 	epic(":+:    :+:     :+:     :+:    :+: :+:        :+:        :+:    :+: :+:    :+: :+:        :+:    :+:     :+:         :+:     :+:    :+: ")
 	epic("+:+    +:+     +:+      +:+  +:+  +:+        +:+        +:+        +:+    +:+ +:+        +:+    +:+     +:+         +:+     +:+        ")
@@ -73,11 +72,12 @@ end
 
 local function loadAddon()
 	PIXEL.LoadDirectoryRecursive("pixel-credits")
+	fuckingHugePrint()
+	hook.Run("PIXEL.Credits.FullyLoaded")
 end
 
 if PIXEL.UI then
 	loadAddon()
-	fuckingHugePrint()
 	return
 end
 
