@@ -18,9 +18,24 @@ function PIXEL.Credits.Log(type, ...)
 	MsgC(col, "[PIXELCredits] ", ..., "\n")
 end
 
+function epic(...)
+	randomNum = math.random(1258, 9875)
+	randomLetters = string.char(math.random(65, 90)) .. string.char(math.random(65, 90)) .. string.char(math.random(65, 90)) .. string.char(math.random(65, 90))
+	MsgC(Color(0, 255, 0), "[0x", randomNum, string.lower(randomLetters), "] ", ..., "\n")
+end
+
 function PIXEL.Credits.DebugLog(...)
 	if !PIXEL.Credits.Debug then return end
 	MsgC(Color(0, 255, 0), "[PIXELCredits-DEBUG] ", ..., "\n")
+end
+function fuckingHugePrint()
+epic(":::::::::  ::::::::::: :::    ::: :::::::::: :::         ::::::::  :::::::::  :::::::::: :::::::::  ::::::::::: :::::::::::  ::::::::  ")
+epic(":+:    :+:     :+:     :+:    :+: :+:        :+:        :+:    :+: :+:    :+: :+:        :+:    :+:     :+:         :+:     :+:    :+: ")
+epic("+:+    +:+     +:+      +:+  +:+  +:+        +:+        +:+        +:+    +:+ +:+        +:+    +:+     +:+         +:+     +:+        ")
+epic("+#++:++#+      +#+       +#++:+   +#++:++#   +#+        +#+        +#++:++#:  +#++:++#   +#+    +:+     +#+         +#+     +#++:++#++ ")
+epic("+#+            +#+      +#+  +#+  +#+        +#+        +#+        +#+    +#+ +#+        +#+    +#+     +#+         +#+            +#+ ")
+epic("#+#            #+#     #+#    #+# #+#        #+#        #+#    #+# #+#    #+# #+#        #+#    #+#     #+#         #+#     #+#    #+# ")
+epic("###        ########### ###    ### ########## ##########  ########  ###    ### ########## #########  ###########     ###      ########  ")
 end
 
 function PIXEL.LoadDirectory(path)
@@ -63,6 +78,7 @@ end
 
 if PIXEL.UI then
 	loadAddon()
+	fuckingHugePrint()
 	return
 end
 
