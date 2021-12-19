@@ -22,7 +22,7 @@ sam.command.new("givecredits")
     if SERVER then
       PIXEL.Credits.DB.GiveCredits(player, number)
     end
-    sam.player.send_message(nil, "{A} gave {T} '{V}' Credits", {
+    sam.player.send_message(nil, "{A} gave {T} {V} Credits", {
         A = calling_ply, T = player, V = number
     })
   end)
@@ -48,7 +48,7 @@ sam.command.new("removecredits")
     if SERVER then
       PIXEL.Credits.DB.RemoveCredits(player, number)
     end
-    sam.player.send_message(nil, "{A} removed '{V}' credits from {T}", {
+    sam.player.send_message(nil, "{A} removed {V} credits from {T}", {
         A = calling_ply, T = player, V = number
     })
   end)

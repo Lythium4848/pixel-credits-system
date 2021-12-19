@@ -9,7 +9,7 @@ end
 
 // Gives Player credits
 function PIXEL.Credits.DB.GiveCredits(player, num)
-	local target = player[1]
+	local target = istable(player) and player[1] or player
 	local targetID = target:SteamID64()
 
 	PIXEL.Credits.DB.GetCredits(targetID, function(data)
@@ -30,7 +30,7 @@ end
 
 // Removes Player credits
 function PIXEL.Credits.DB.RemoveCredits(player, num)
-	local target = player[1]
+	local target = player
 	local targetID = target:SteamID64()
 
 	PIXEL.Credits.DB.GetCredits(targetID, function(data)
